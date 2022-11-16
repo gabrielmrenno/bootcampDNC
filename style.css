@@ -1,6 +1,17 @@
+:root {
+    --dnc-blue: #0C70F2;
+    --dnc-black: #303030;
+    --dnc-grey: #C9C9C9;
+
+    --default-font: 'Inter';
+}
+
 body {
     margin: 0;
     padding: 0;
+
+    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
+    background-repeat: no-repeat;
 }
 
 a {
@@ -18,7 +29,7 @@ a {
 
     border-bottom: 1px solid #bababa;
 
-    background-color: #303030;
+    background-color: var(--dnc-black);
 }
 
     #menu {
@@ -36,11 +47,11 @@ a {
     }
 
     #mainNav div a:hover {
-        color: #CCC;
+        color: var(--dnc-grey);
     }
 
     #mainNav button {
-        background-color: #0C70F2;
+        background-color: var(--dnc-blue);
         border: 0;
         padding: 8px 16px;
 
@@ -52,3 +63,120 @@ a {
         box-shadow: 3px 2px 4px rgba(12, 112, 242, 0.25);
         cursor: pointer;
     }
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 100px 0;
+}
+
+    #content header {
+        color: white;
+        font-family: var(--default-font);
+        margin-bottom: 100px;
+    }
+
+        #content header h1 {
+            font-size: 80px;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-align: center;
+
+            margin-bottom: 20px;
+        }
+
+        #content header h2 {
+            text-align: center;
+
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        #content header .invert {
+            background-color: black;
+            font-weight: bold;
+            padding: 0 5px;
+        }
+
+    #content form {
+        color: white;
+        font-family: var(--default-font);
+        font-weight: 600;
+        font-size: 30px;
+
+        width: 50%;
+
+        margin: 0 15%;
+    }
+
+        #content .formGroup {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+        }
+        
+            #content .formGroup input {
+                border-radius: 10px;
+                border: 0;
+
+                padding: 16px;
+
+                font-size: 20px;
+
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+
+            #content .formGroup input::placeholder {
+                color: rgba(57, 57, 57, 0.5);
+            }
+
+            #content .formGroup label {
+                margin-bottom: 8px;
+            }
+
+            .checkboxItens {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .checkboxItem {
+                display: flex;
+                justify-content: center;
+            }
+
+            input[type="checkbox"] {
+                transform: scale(1.7);
+            }
+
+            #content .checkboxItem label {
+                margin: 0;
+                margin-left: 8px;
+            }
+
+            .checkboxItens label {
+                font-size: 25px;
+            }
+
+            button[type="submit"] {
+                background-color: rgba(12, 112, 242, 0.9);
+                width: 100%;
+                padding: 8px 0;
+
+                border: none;
+                border-radius: 10px;
+
+                font-size: 32px;
+                font-weight: 600;
+
+                margin-top: 80px;
+                color: white;
+
+                cursor: pointer;
+            }
+
+            button[type="submit"]:hover {
+                background-color: rgba(12, 112, 242, 0.5);
+            }
